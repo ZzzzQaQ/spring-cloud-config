@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/oa?characterEncoding=UTF-8&serverTimezone=UTC
+      username: root
+      password: zbs123
+      driver-class-name: com.mysql.jdbc.Driver
+      initial-size: 5
+      max-active: 20
+      min-idle: 5
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+      test-on-borrow: true
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      use-global-data-source-stat: true
+      filter:
+        config:
+          enabled: true
+      connect-properties:
+        config.decrypt: "false"
+        config.decrypt.key: "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJekH7Pw/8L8obSZCZbpzm63mtKFCC8LYk7/B1e3rtFKH/56ehSj9P/HJaYgxoFmGH6sEbbyTe41/yb4X4HgWzkCAwEAAQ=="
+      validation-query: select 'x'
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    defaultExpireTime: 1800
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 0
+        max-active: 8
+        max-wait: -1ms

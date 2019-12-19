@@ -17,7 +17,6 @@ spring:
       max-pool-prepared-statement-per-connection-size: 20
       use-global-data-source-stat: true
 
-############################################## \u4F01\u67E5\u67E5\u914D\u7F6E ##############################################
 yjapi:
   key: 86dc3172bf014b53a3052196ede905c8
   secretKey: B8AF9825B5BD96F7AB9FFD8AD02EB785
